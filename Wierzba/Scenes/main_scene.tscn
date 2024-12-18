@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://nwceluw0msja"]
+
+[ext_resource type="PackedScene" uid="uid://bdild113we6mo" path="res://Wierzba/Prefabs/Player.tscn" id="1_pfqnu"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_vbkyj"]
+
+[node name="Main Scene" type="Node3D"]
+
+[node name="Node3D" parent="." instance=ExtResource("1_pfqnu")]
+
+[node name="Camera3D" type="Camera3D" parent="Node3D"]
+transform = Transform3D(-1, 8.74228e-08, 3.82137e-15, 0, -4.37114e-08, 1, 8.74228e-08, 1, 4.37114e-08, 0, 3.6759, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.23329, 0, -0.523862)
+mesh = SubResource("BoxMesh_vbkyj")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.999908, -0.00678159, -0.0117522, 0.00206758, -0.77987, 0.625939, -0.01341, -0.625905, -0.779784, -1.83614, 0.0291533, -4.58036)
