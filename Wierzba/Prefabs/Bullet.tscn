@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbed2h0am66q4"]
+
+[ext_resource type="Script" path="res://Wierzba/Scripts/Bullet.gd" id="1_7g6ky"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_5g0sj"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_q1m0w"]
+height = 1.0
+
+[node name="Bullet" type="RigidBody3D"]
+gravity_scale = 0.0
+script = ExtResource("1_7g6ky")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_5g0sj")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_q1m0w")
